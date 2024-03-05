@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+header {
+    background-color: #090929;
+    color: #fff;
+   
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.course {
+    width: 25%;
+    height: 420px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #001612;
+}
+.course img:hover{
+    transition: all;
+    transform: scale(1.1);
+    
+}
+
+.course h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.course h2:hover{
+    color: #e2ec18;
+    transition: all;
+}
+
+.course p {
+    font-size: 1rem;
+    color:  #001612;
+    margin-bottom: 10px;
+}
+
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    
+    background-color: #d2390a;
+}
+
+footer {
+    
+    background-color: #090929;;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+</style>
+<body action="/Courses">
+    <header>
+        <h1>Welcome to our Courses</h1>
+    </header>
+    <main>
+        <section class="course">
+            <img src="./images/bg.jpeg" alt="Course 1">
+            <h2>KCF Front-end Cohort 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae debitis maiores maxime, consectetur facilis ipsam itaque illo, suscipit praesentium reiciendis! Quasi non sit deserunt nulla facere ut architecto quo? </p>
+            <button>Join Now</button>
+        </section>
+        <section class="course">
+            <img src="./images/backend.jpg" alt="Course 2">
+            <h2>KCF Backend-Cohort2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae debitis maiores maxime, consectetur facilis ipsam itaque illo, suscipit praesentium reiciendis! Quasi non sit deserunt nulla facere ut architecto quo? </p>
+            <button>Join Now</button>
+        </section>
+        <section class="course">
+            <img src="./images/front2.png" alt="Course 3">
+            <h2>KCF Font-end cohort4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae debitis maiores maxime, consectetur facilis ipsam itaque illo, suscipit praesentium reiciendis! Quasi non sit deserunt nulla facere ut architecto quo? </p>
+            <button>Join Now</button>
+        </section>
+        <section class="course">
+            <img src="./images/backend2.avif" alt="Course 4">
+            <h2>KCF Back-end Cohort 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae debitis maiores maxime, consectetur facilis ipsam itaque illo, suscipit praesentium reiciendis! Quasi non sit deserunt nulla facere ut architecto quo? </p>
+            <button>Join Now</button>
+        </section>
+
+        <section class="course">
+            <img src="./images/front3.jpg" alt="Course 5">
+            <h2>KCF Front-end Alpha 2024</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae debitis maiores maxime, consectetur facilis ipsam itaque illo, suscipit praesentium reiciendis! Quasi non sit deserunt nulla facere ut architecto quo? </p>
+            <button>Join Now</button>
+        </section>
+        <section class="course">
+            <img src="./images/backend1.jpg" alt="Course 6">
+            <h2>KCF Backend Cohort 4 2024</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae debitis maiores maxime, consectetur facilis ipsam itaque illo, suscipit praesentium reiciendis! Quasi non sit deserunt nulla facere ut architecto quo? </p>
+            <button>Join Now</button>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Courses Landing Page</p>
+    </footer>
+   
+</body>
+
+</html>
+
