@@ -2,21 +2,23 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import morgan from 'morgan';
+// import fs from 'node:fs';
+import courseRouter from "./routes/courseRouter.js";
+// import router from './routes/users.js';
 
+const Port=process.env.PORT ||4000;
+// const users = JSON.parse(fs.readFileSync('./Models/users.json', 'utf-8'));
 
-let isLoggedIn=false
-const Port=4000||process.env.PORT ;
-let users = [
-    { username: 'ivan', password: '1234' },
-    { username: 'ivan2', password: '1234' }
+// const loginRoute= "./routes/login.js";
 
-];
 const app = express();
 
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.json());
+app.use('/api/course',courseRouter);
 app.use(morgan('dev')); 
 
 app.get('/login', (req, res) => {
@@ -25,34 +27,32 @@ app.get('/login', (req, res) => {
 });
 
 
+
 app.post('/login', (req, res) => {
-    const {username,password} = req.body;
-    const user = users.find(u => u.username === username && u.password === password);
-    if (user) {
-        isLoggedIn = true;
+    let {username,password} = req.body;
+    username="ivan";
+    password="ivan1234";
+
+    const user = user.find(u => u.username === username && u.password === password);
+    if (user==user) {
         res.redirect('/node-course');
+        
     } else {
-        res.send('Invalid username or password.');
+        res.redirect('/login.html?error=1');
     }
 });
 
 
+
 app.get('/node-course', (req, res) => {
-
-    const user = isLoggedIn;
-
-    if (user) {
-        
-        res.sendFile(path.join(__dirname,'public','node-course.html'));
-    } else {
-        res.send('You Need to Login First');
-    }
-
     
+        res.sendFile(path.join(__dirname,'public','node-course.html'));
 });
 
 
 // Start the server
+
+
 
 app.listen(Port, () => {
   console.log(`Server is running on port "http://localhost:${Port}"`);

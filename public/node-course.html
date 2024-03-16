@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-body {
+*{
     font-family: Arial, sans-serif;
     margin: 0;
-
     padding: 0;
-    background-color: #f3f3f3;
+   
 }
 
 header {
@@ -29,22 +28,26 @@ main {
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 20px;
+   margin-bottom: 20px;
 }
 
 .course {
     width: 25%;
-    height: 420px;
+    height: 400px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
+     border-radius: 3px;
+    /* border: 3px solid #090929; */ 
 }
 
 .course img {
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid #001612;
+    height: 150px;
+    border-radius: 6px;
 }
+
 .course img:hover{
     transition: all;
     transform: scale(1.1);
@@ -55,22 +58,36 @@ main {
     font-size: 1.5rem;
     margin-top: 10px;
     margin-bottom: 5px;
+    border-radius: 6px;
+    color: #001612;
+   border-bottom: 2px green ;
 }
-.course h2:hover{
-    color: #e2ec18;
+
+h2:hover{
+    color: #3a06f9;
     transition: all;
+    font-size: 1.6rem;
 }
 
 .course p {
-    font-size: 1rem;
-    color:  #001612;
+    font-size: 1.0rem;
+    color: #090929;
     margin-bottom: 10px;
+   
+}
+p:hover{
+    color: #04022a;
+    transition: all;
+    font-size: 1.1rem;
+
 }
 
 
 button {
     background-color: #333;
     color: #fff;
+    border-radius: 6px;
+    width: 100%;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -79,7 +96,7 @@ button {
 
 button:hover{
     
-    background-color: #d2390a;
+    background-color: #11d20a;
 }
 
 footer {
@@ -135,7 +152,7 @@ footer {
         </section>
         <section class="course">
             <img src="./images/backend1.jpg" alt="Course 6">
-            <h2>KCF Backend Cohort 4 2024</h2>
+            <h2>KCF Backend Cohort4</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae debitis maiores maxime, consectetur facilis ipsam itaque illo, suscipit praesentium reiciendis! Quasi non sit deserunt nulla facere ut architecto quo? </p>
             <button>Join Now</button>
         </section>
